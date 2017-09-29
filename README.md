@@ -85,7 +85,7 @@ Class | Method | HTTP request | Description
 *FileApi* | [**writeFile**](docs/Api/FileApi.md#writefile) | **POST** /file/write | Write File
 *KeyringApi* | [**deleteKey**](docs/Api/KeyringApi.md#deletekey) | **GET** /key-ring/delete | Remove a key from the key ring
 *KeyringApi* | [**retrieveKeyRing**](docs/Api/KeyringApi.md#retrievekeyring) | **PUT** /key-ring | Retrieve KeyRing
-*KeyringApi* | [**setKey**](docs/Api/KeyringApi.md#setkey) | **GET** /key-ring/set | Set a key to the key ring
+*KeyringApi* | [**setKey**](docs/Api/KeyringApi.md#setkey) | **POST** /key-ring/set | Set a key to the key ring
 *LogsApi* | [**retrieveListLog**](docs/Api/LogsApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log Entries
 *LogsApi* | [**truncateLog**](docs/Api/LogsApi.md#truncatelog) | **GET** /log/truncate | Truncate Log Table
 
