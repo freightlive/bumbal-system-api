@@ -118,7 +118,7 @@ class KeyringApi
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteKey');
         }
         // parse inputs
-        $resourcePath = "/key-ring/delete";
+        $resourcePath = "/key-ring/delete/{name}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -158,7 +158,7 @@ class KeyringApi
                 $httpBody,
                 $headerParams,
                 '\BumbalSystem\Model\ApiResponse',
-                '/key-ring/delete'
+                '/key-ring/delete/{name}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalSystem\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

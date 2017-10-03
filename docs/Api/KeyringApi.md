@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/system/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteKey**](KeyringApi.md#deleteKey) | **GET** /key-ring/delete | Remove a key from the key ring
+[**deleteKey**](KeyringApi.md#deleteKey) | **GET** /key-ring/delete/{name} | Remove a key from the key ring
 [**retrieveKeyRing**](KeyringApi.md#retrieveKeyRing) | **PUT** /key-ring | Retrieve KeyRing
 [**setKey**](KeyringApi.md#setKey) | **POST** /key-ring/set | Set a key to the key ring
 
