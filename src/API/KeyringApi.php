@@ -153,7 +153,7 @@ class KeyringApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'GET',
+                'DELETE',
                 $queryParams,
                 $httpBody,
                 $headerParams,
