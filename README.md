@@ -88,6 +88,9 @@ Class | Method | HTTP request | Description
 *KeyringApi* | [**setKey**](docs/Api/KeyringApi.md#setkey) | **POST** /key-ring/set | Set a key to the key ring
 *LogsApi* | [**retrieveListLog**](docs/Api/LogsApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log Entries
 *LogsApi* | [**truncateLog**](docs/Api/LogsApi.md#truncatelog) | **GET** /log/truncate | Truncate Log Table
+*WebhooksApi* | [**getWebHooks**](docs/Api/WebhooksApi.md#getwebhooks) | **PUT** /web-hook | Retrieve Web Hooks
+*WebhooksApi* | [**removeByLabelWebHook**](docs/Api/WebhooksApi.md#removebylabelwebhook) | **GET** /web-hook/remove-by-label/{label} | Remove web hooks by label
+*WebhooksApi* | [**setWebHook**](docs/Api/WebhooksApi.md#setwebhook) | **POST** /web-hook/set | Set Web Hook
 
 
 ## Documentation For Models
@@ -101,6 +104,7 @@ Class | Method | HTTP request | Description
  - [LogModel](docs/Model/LogModel.md)
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
+ - [WebHook](docs/Model/WebHook.md)
 
 
 ## Documentation For Authorization
