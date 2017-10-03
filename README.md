@@ -83,7 +83,7 @@ Class | Method | HTTP request | Description
 *ConfigurationApi* | [**setConfiguration**](docs/Api/ConfigurationApi.md#setconfiguration) | **POST** /configuration/set | Set Configuration
 *FileApi* | [**readFile**](docs/Api/FileApi.md#readfile) | **POST** /file/read | Read File
 *FileApi* | [**writeFile**](docs/Api/FileApi.md#writefile) | **POST** /file/write | Write File
-*KeyringApi* | [**deleteKey**](docs/Api/KeyringApi.md#deletekey) | **DELETE** /key-ring/delete/{name} | Remove a key from the key ring
+*KeyringApi* | [**removeKey**](docs/Api/KeyringApi.md#removekey) | **GET** /key-ring/remove | Remove a key from the key ring
 *KeyringApi* | [**retrieveKeyRing**](docs/Api/KeyringApi.md#retrievekeyring) | **PUT** /key-ring | Retrieve KeyRing
 *KeyringApi* | [**setKey**](docs/Api/KeyringApi.md#setkey) | **POST** /key-ring/set | Set a key to the key ring
 *LogsApi* | [**retrieveListLog**](docs/Api/LogsApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log Entries

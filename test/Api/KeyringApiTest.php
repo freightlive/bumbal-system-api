@@ -73,12 +73,12 @@ class KeyringApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for deleteKey
+     * Test case for removeKey
      *
      * Remove a key from the key ring.
      *
      */
-    public function testDeleteKey()
+    public function testRemoveKey()
     {
     }
 

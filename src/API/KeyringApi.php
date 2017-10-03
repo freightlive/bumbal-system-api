@@ -88,7 +88,7 @@ class KeyringApi
     }
 
     /**
-     * Operation deleteKey
+     * Operation removeKey
      *
      * Remove a key from the key ring
      *
@@ -96,14 +96,14 @@ class KeyringApi
      * @throws \BumbalSystem\ApiException on non-2xx response
      * @return \BumbalSystem\Model\ApiResponse
      */
-    public function deleteKey($name)
+    public function removeKey($name)
     {
-        list($response) = $this->deleteKeyWithHttpInfo($name);
+        list($response) = $this->removeKeyWithHttpInfo($name);
         return $response;
     }
 
     /**
-     * Operation deleteKeyWithHttpInfo
+     * Operation removeKeyWithHttpInfo
      *
      * Remove a key from the key ring
      *
@@ -111,14 +111,14 @@ class KeyringApi
      * @throws \BumbalSystem\ApiException on non-2xx response
      * @return array of \BumbalSystem\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteKeyWithHttpInfo($name)
+    public function removeKeyWithHttpInfo($name)
     {
         // verify the required parameter 'name' is set
         if ($name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteKey');
+            throw new \InvalidArgumentException('Missing the required parameter $name when calling removeKey');
         }
         // parse inputs
-        $resourcePath = "/key-ring/delete/{name}";
+        $resourcePath = "/key-ring/remove";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -129,13 +129,9 @@ class KeyringApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // path params
+        // query params
         if ($name !== null) {
-            $resourcePath = str_replace(
-                "{" . "name" . "}",
-                $this->apiClient->getSerializer()->toPathValue($name),
-                $resourcePath
-            );
+            $queryParams['name'] = $this->apiClient->getSerializer()->toQueryValue($name);
         }
 
         // for model (json/xml)
@@ -153,12 +149,12 @@ class KeyringApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'DELETE',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\BumbalSystem\Model\ApiResponse',
-                '/key-ring/delete/{name}'
+                '/key-ring/remove'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalSystem\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

@@ -4,13 +4,13 @@ All URIs are relative to *https://localhost/system/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteKey**](KeyringApi.md#deleteKey) | **DELETE** /key-ring/delete/{name} | Remove a key from the key ring
+[**removeKey**](KeyringApi.md#removeKey) | **GET** /key-ring/remove | Remove a key from the key ring
 [**retrieveKeyRing**](KeyringApi.md#retrieveKeyRing) | **PUT** /key-ring | Retrieve KeyRing
 [**setKey**](KeyringApi.md#setKey) | **POST** /key-ring/set | Set a key to the key ring
 
 
-# **deleteKey**
-> \BumbalSystem\Model\ApiResponse deleteKey($name)
+# **removeKey**
+> \BumbalSystem\Model\ApiResponse removeKey($name)
 
 Remove a key from the key ring
 
@@ -30,10 +30,10 @@ $api_instance = new BumbalSystem\Api\KeyringApi();
 $name = "name_example"; // string | Name of the key to remove
 
 try {
-    $result = $api_instance->deleteKey($name);
+    $result = $api_instance->removeKey($name);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling KeyringApi->deleteKey: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling KeyringApi->removeKey: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
