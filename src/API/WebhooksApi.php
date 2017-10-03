@@ -165,7 +165,7 @@ class WebhooksApi
      *
      * Remove web hooks by label
      *
-     * @param string $label Label to remove (required)
+     * @param string $label label to remove (required)
      * @throws \BumbalSystem\ApiException on non-2xx response
      * @return \BumbalSystem\Model\ApiResponse
      */
@@ -180,7 +180,7 @@ class WebhooksApi
      *
      * Remove web hooks by label
      *
-     * @param string $label Label to remove (required)
+     * @param string $label label to remove (required)
      * @throws \BumbalSystem\ApiException on non-2xx response
      * @return array of \BumbalSystem\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -191,7 +191,7 @@ class WebhooksApi
             throw new \InvalidArgumentException('Missing the required parameter $label when calling removeByLabelWebHook');
         }
         // parse inputs
-        $resourcePath = "/web-hook/remove-by-label/{label}";
+        $resourcePath = "/web-hook/remove-by-label";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -231,7 +231,7 @@ class WebhooksApi
                 $httpBody,
                 $headerParams,
                 '\BumbalSystem\Model\ApiResponse',
-                '/web-hook/remove-by-label/{label}'
+                '/web-hook/remove-by-label'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalSystem\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

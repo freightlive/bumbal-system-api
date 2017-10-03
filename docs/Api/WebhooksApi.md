@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost/system/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getWebHooks**](WebhooksApi.md#getWebHooks) | **PUT** /web-hook | Retrieve Web Hooks
-[**removeByLabelWebHook**](WebhooksApi.md#removeByLabelWebHook) | **GET** /web-hook/remove-by-label/{label} | Remove web hooks by label
+[**removeByLabelWebHook**](WebhooksApi.md#removeByLabelWebHook) | **GET** /web-hook/remove-by-label | Remove web hooks by label
 [**setWebHook**](WebhooksApi.md#setWebHook) | **POST** /web-hook/set | Set Web Hook
 
 
@@ -73,7 +73,7 @@ BumbalSystem\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalSystem\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalSystem\Api\WebhooksApi();
-$label = "label_example"; // string | Label to remove
+$label = "label_example"; // string | label to remove
 
 try {
     $result = $api_instance->removeByLabelWebHook($label);
@@ -88,7 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **label** | **string**| Label to remove |
+ **label** | **string**| label to remove |
 
 ### Return type
 
