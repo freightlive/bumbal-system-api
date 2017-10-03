@@ -202,13 +202,9 @@ class WebhooksApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // path params
+        // query params
         if ($label !== null) {
-            $resourcePath = str_replace(
-                "{" . "label" . "}",
-                $this->apiClient->getSerializer()->toPathValue($label),
-                $resourcePath
-            );
+            $queryParams['label'] = $this->apiClient->getSerializer()->toQueryValue($label);
         }
 
         // for model (json/xml)
