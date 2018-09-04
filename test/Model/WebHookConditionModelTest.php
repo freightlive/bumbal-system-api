@@ -1,6 +1,6 @@
 <?php
 /**
- * WebHookModelTest
+ * WebHookConditionModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalSystem;
 
 /**
- * WebHookModelTest Class Doc Comment
+ * WebHookConditionModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description WebHookModel
+// * @description WebHookConditionModel
 /**
  * @package     BumbalSystem
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebHookModelTest extends \PHPUnit_Framework_TestCase
+class WebHookConditionModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,23 @@ class WebHookModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "WebHookModel"
+     * Test "WebHookConditionModel"
      */
-    public function testWebHookModel()
+    public function testWebHookConditionModel()
     {
     }
 
     /**
-     * Test attribute "identifier"
+     * Test attribute "key"
      */
-    public function testPropertyIdentifier()
+    public function testPropertyKey()
     {
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "value"
      */
-    public function testPropertyUrl()
-    {
-    }
-
-    /**
-     * Test attribute "label"
-     */
-    public function testPropertyLabel()
-    {
-    }
-
-    /**
-     * Test attribute "conditions"
-     */
-    public function testPropertyConditions()
+    public function testPropertyValue()
     {
     }
 }

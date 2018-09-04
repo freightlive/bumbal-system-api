@@ -1,6 +1,6 @@
 <?php
 /**
- * WebHookModel
+ * WebHookConditionModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalSystem\Model;
 use \ArrayAccess;
 
 /**
- * WebHookModel Class Doc Comment
+ * WebHookConditionModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalSystem
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebHookModel implements ArrayAccess
+class WebHookConditionModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,15 @@ class WebHookModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'WebHookModel';
+    protected static $swaggerModelName = 'WebHookConditionModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'identifier' => 'string',
-        'url' => 'string',
-        'label' => 'string',
-        'conditions' => '\BumbalSystem\Model\WebHookConditionModel[]'
+        'key' => 'string',
+        'value' => 'int'
     ];
 
     /**
@@ -65,10 +63,8 @@ class WebHookModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'identifier' => null,
-        'url' => null,
-        'label' => null,
-        'conditions' => null
+        'key' => null,
+        'value' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +82,8 @@ class WebHookModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'identifier' => 'identifier',
-        'url' => 'url',
-        'label' => 'label',
-        'conditions' => 'conditions'
+        'key' => 'key',
+        'value' => 'value'
     ];
 
 
@@ -98,10 +92,8 @@ class WebHookModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'identifier' => 'setIdentifier',
-        'url' => 'setUrl',
-        'label' => 'setLabel',
-        'conditions' => 'setConditions'
+        'key' => 'setKey',
+        'value' => 'setValue'
     ];
 
 
@@ -110,10 +102,8 @@ class WebHookModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'identifier' => 'getIdentifier',
-        'url' => 'getUrl',
-        'label' => 'getLabel',
-        'conditions' => 'getConditions'
+        'key' => 'getKey',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -147,10 +137,8 @@ class WebHookModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -179,85 +167,43 @@ class WebHookModel implements ArrayAccess
 
 
     /**
-     * Gets identifier
+     * Gets key
      * @return string
      */
-    public function getIdentifier()
+    public function getKey()
     {
-        return $this->container['identifier'];
+        return $this->container['key'];
     }
 
     /**
-     * Sets identifier
-     * @param string $identifier System identifier
+     * Sets key
+     * @param string $key Key for this Value
      * @return $this
      */
-    public function setIdentifier($identifier)
+    public function setKey($key)
     {
-        $this->container['identifier'] = $identifier;
+        $this->container['key'] = $key;
 
         return $this;
     }
 
     /**
-     * Gets url
-     * @return string
+     * Gets value
+     * @return int
      */
-    public function getUrl()
+    public function getValue()
     {
-        return $this->container['url'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets url
-     * @param string $url URL
+     * Sets value
+     * @param int $value Value for this key
      * @return $this
      */
-    public function setUrl($url)
+    public function setValue($value)
     {
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     * @return string
-     */
-    public function getLabel()
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     * @param string $label label
-     * @return $this
-     */
-    public function setLabel($label)
-    {
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets conditions
-     * @return \BumbalSystem\Model\WebHookConditionModel[]
-     */
-    public function getConditions()
-    {
-        return $this->container['conditions'];
-    }
-
-    /**
-     * Sets conditions
-     * @param \BumbalSystem\Model\WebHookConditionModel[] $conditions array with conditions
-     * @return $this
-     */
-    public function setConditions($conditions)
-    {
-        $this->container['conditions'] = $conditions;
+        $this->container['value'] = $value;
 
         return $this;
     }

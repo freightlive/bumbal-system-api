@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
  - [LogModel](docs/Model/LogModel.md)
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
+ - [WebHookConditionModel](docs/Model/WebHookConditionModel.md)
  - [WebHookModel](docs/Model/WebHookModel.md)
 
 
